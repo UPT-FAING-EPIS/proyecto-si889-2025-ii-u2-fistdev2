@@ -1,0 +1,28 @@
+Eres un asistente educativo. Analiza el siguiente contenido (extracto de un sílabo/apuntes) y devuelve EXCLUSIVAMENTE un JSON válido con el siguiente esquema. NO agregues comentarios ni texto fuera del JSON.
+
+Esquema:
+{
+  "summary": {
+    "title": "string",
+    "overview": "string (breve resumen en 3-5 frases)",
+    "topics": [
+      { "title": "string", "key_points": ["string", "string", "..."] }
+    ]
+  },
+  "flashcards": [
+    { "topic": "string", "question": "string", "answer": "string" }
+  ]
+}
+
+Requisitos:
+- Escribe las respuestas en español claro.
+- Usa entre 4 y 8 temas máximo.
+- Genera entre 10 y 20 flashcards variadas.
+- Mantén las preguntas y respuestas concisas y útiles para estudio.
+- No incluyas enlaces.
+- Devuelve SOLO JSON, sin backticks.
+
+Contenido:
+---
+{{CONTENIDO_DEL_PDF}}
+---
